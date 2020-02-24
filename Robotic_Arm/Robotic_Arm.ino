@@ -19,7 +19,7 @@ int fs5=0;
 
 void setup() {
   //Initialise Serial Comm
-  Serial.begin(56700);
+  Serial.begin(57600);
   //All servos attached to their respective fingers
   f1.attach(3);
   f2.attach(5);
@@ -40,7 +40,7 @@ void loop() {
   if(Serial.available()>0)
   {
     finger=Serial.read();
-    if(finger==1)
+    if(finger=="1")
     {
       if(fs1==0)
       {
@@ -55,7 +55,7 @@ void loop() {
         Serial.println("Finger 1 Opened");
       }
     }
-    if(finger==2)
+    if(finger=="2")
     {
       if(fs2==0)
       {
@@ -70,7 +70,7 @@ void loop() {
         Serial.println("Finger 2 Opened");
       }
     }
-    if(finger==3)
+    if(finger=="3")
     {
       if(fs3==0)
       {
@@ -85,7 +85,7 @@ void loop() {
         Serial.println("Finger 3 Opened");
       }
     }
-    if(finger==4)
+    if(finger=="4")
     {
       if(fs4==0)
       {
@@ -100,7 +100,7 @@ void loop() {
         Serial.println("Finger 4 Opened");
       }
     }
-    if(finger==5)
+    if(finger=="5")
     {
       if(fs5==0)
       {
