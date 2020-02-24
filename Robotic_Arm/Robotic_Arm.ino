@@ -8,7 +8,7 @@ Servo f3;
 Servo f4;
 Servo f5;
 
-int finger;
+char finger;
 //Check status of each finger
 int fs1=0;
 int fs2=0;
